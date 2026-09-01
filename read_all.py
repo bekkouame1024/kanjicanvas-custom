@@ -302,11 +302,20 @@ for (utf, l, pattern) in kanjis:
 #print(kanjis)
 """
 
-with open("output.txt", "w", encoding="utf-8") as f:
-    for (utf, l, pattern) in kanjis:
+with open("demo/assets/data.json", "w", encoding="utf-8") as f:
+    f.write("[\n")
+
+    for i, (utf, l, pattern) in enumerate(kanjis):
         norm_i = momentNormalize(pattern)
         ex_i = extractFeatures(norm_i, 20.)
 
-        f.write('["')
+        f.write('  ["')
         f.write(utf)
-        f.write('",' + str(l) + "," + str(ex_i) + "],\n")
+        f.write('",' + str(l) + "," + str(ex_i) + "]")
+
+        if i < len(kanjis) - 1:
+            f.write(",")
+
+        f.write("\n")
+
+    f.write("]\n")
