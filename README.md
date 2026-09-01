@@ -1,5 +1,11 @@
 # Stroke order and stroke number free online Japanese (Kanji) Handwriting Recognition 
 
+> **Personal fork / custom version**
+>
+> This is a personal customized version of [Kanji Canvas](https://github.com/asdfjkl/kanjicanvas), modified for my own use.
+>
+> The original project and its copyright notices are retained below.
+
 This is an implementation of stroke order and stroke number free online Japanese (Kanji) Handwriting Recognition 
 in client side only Javascript. Subjectively it provides much more robust recognition than many other implementations out there.
 
